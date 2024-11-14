@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import Login from './Login';
+import Register from './Register';
 
 export default function Registration() {
     const [email, setEmail] = useState('')
@@ -8,7 +10,7 @@ export default function Registration() {
         <div>
             <h1>Task 1</h1>
             <div>
-                <form>
+                {/* <form>
                     <input 
                         type = 'email'
                         placeholder = 'email'
@@ -21,8 +23,12 @@ export default function Registration() {
                         placeholder='password'
                         value={password}
                         onChange={e => setPassword(e.target.value)}
-                    />
-                </form>
+                    /> */}
+
+                    <Login />
+                    <Register />
+                    {/* <div><button>Sign up</button></div>
+                </form> */}
             </div>
         </div>
     )

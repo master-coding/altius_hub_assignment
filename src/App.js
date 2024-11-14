@@ -1,12 +1,14 @@
 import './App.css';
+import ImageUpload from './components/ImageUpload';
 import Registration from './components/Registration';
 import Todo from './components/Todo';
 
 function App() {
   return (
     <div className="App">
-      Altius Hub Assignment
+      <h1>AltiusHub Assignment</h1>
       <Registration />
+      <ImageUpload />
       <Todo />
     </div>
   );
