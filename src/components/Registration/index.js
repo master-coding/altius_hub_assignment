@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Login from './Login';
 import Register from './Register';
 
@@ -25,9 +25,8 @@ export default function Registration() {
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                     /> */}
-
-                    <Login setIsAuthenticated={setIsAuthenticated}/>
                     <Register setIsAuthenticated={setIsAuthenticated}/>
+                    <Login setIsAuthenticated={setIsAuthenticated}/>
                     {/* <div><button>Sign up</button></div>
                 </form> */}
             </div>
