@@ -25,8 +25,8 @@ export default function Registration() {
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                     /> */}
-                    <Register setIsAuthenticated={setIsAuthenticated}/>
-                    <Login setIsAuthenticated={setIsAuthenticated}/>
+                    <Register isAuthenticated = {isAuthenticated} setIsAuthenticated={setIsAuthenticated}/>
+                    <Login isAuthenticated = {isAuthenticated} setIsAuthenticated={setIsAuthenticated}/>
                     {/* <div><button>Sign up</button></div>
                 </form> */}
             </div>

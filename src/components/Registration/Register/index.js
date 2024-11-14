@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Register({ setIsAuthenticated }) {
+export default function Register({ isAuthenticated, setIsAuthenticated }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -8,10 +8,10 @@ export default function Register({ setIsAuthenticated }) {
   const handleRegister = (e) => {
     e.preventDefault();
 
+    console.log('log')
     if (email && password) {
       localStorage.setItem("userEmail", email);
       localStorage.setItem("userPassword", password);
-
       setIsAuthenticated(true);
     } else {
       setError("Please fill both fields");
@@ -39,6 +39,8 @@ export default function Register({ setIsAuthenticated }) {
         />
 
         <button type="submit">Register</button>
+
+        {isAuthenticated ? <p>Details saved</p> : null}
       </form>
       {error && <p>{error}</p>}
     </div>

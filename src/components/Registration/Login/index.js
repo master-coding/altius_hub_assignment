@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Login({ setIsAuthenticated }) {
+export default function Login({ isAuthenticated, setIsAuthenticated }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -13,6 +13,7 @@ export default function Login({ setIsAuthenticated }) {
 
     if (email === storedEmail && password === storedPassword) {
       setIsAuthenticated(true);
+      <p>login successfully</p>
     } else {
       setError("invalid credentials");
     }
@@ -37,6 +38,8 @@ export default function Login({ setIsAuthenticated }) {
         />
 
         <button type="submit">Login</button>
+
+
       </form>
       {error && <p>{error}</p>}
     </div>
